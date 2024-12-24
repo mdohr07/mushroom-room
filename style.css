@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFFFCC;;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-size: 16px;
+    color: #336633;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  /* Mushrooms before header 1 */
+  h1::before {
+    content: url('https://dl.glitter-graphics.com/pub/2704/2704886adhvtepsr8.gif');
+    margin-right: 10px; 
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  /* One mushroom before header 2 */
+  h2::before {
+    content: url('https://dl.glitter-graphics.com/pub/650/650020a5xdfhxnl2.gif');
+    margin-right: 10px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  h6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  ul, ol {
+    margin-bottom: 30px;
+  }
+
+  hr {
+    border-style: dashed;
+    border-color: #993333;
+  }
+
+  /* Images */
+  img {
+    width: auto;
+    max-width: 100%;
+    border: none;
+  }
+
+  img a, a img {
+    width: auto;
+    max-width: 99.05%;
+    border: 1px solid #993333;
+    filter: contrast(80%)
+  }
+
+  img a:hover, a img:hover {
+    border: 1px solid #CC3333;
+    filter: none;
+  }
+
+
+/* The main container */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+  }
+
+/* Left side with navigation and user info */
+.left {
+    background-image: url('https://bg-patterns.com/p/da0401/m_da04012.jpg'); /* Lots of pretty backgrounds on https://bg-patterns.com */
+    padding: 50px;
+    border-right: groove;
+    border-color: #999;
+    color: #FFCC99;
+    font-size: 14px;;
+  }
+
+  .left h3 {
+    color: #FF9999;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+
+  .left a {
+    color:#99CC99;
+  }
+
+  .left ul {
+    color:#FFCC99;
+    margin-bottom: 30px;
+  }
+
+  .left ul li {
+    list-style-type: none;
+    text-align: left;
+    text-indent: -40px;
+  }
+
+  .left ul li::before {
+    content: 'x';
+    margin-right: 10px;
+  }
+
+  .avatar {
+    background-color:#FFCC99;
+    border: 1px dashed #993333;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+  }
+
+  .avatar img {
+    width: 100px;
+    height: 100px;
+  }
+
+/* The right side where the content goes */
+.right {
+  background-image: url('https://dl.glitter-graphics.com/pub/764/764525qkmjci8i28.gif');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-color: #FFFFCC;
+  padding: 5% 10% 0% 5%;
+  text-align: justify;
+  text-justify: distribute;
+}
+
+  .right a {
+    color: #993333;
+  }
+
+  /* The title of the website */
+  .title, .title a {
+    font-family: cursive;
+    font-size: 42px;
+    margin-top: 0px;
+    margin-bottom: 70px;
+    color: #CC3333; 
+  }
+  
+  .title::before {
+    content: none; /* No musroom before title */
+  }
+
+footer {
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10%;
+    margin-bottom: 10px;
+    color: #999;
+    border-top: 1px solid #999;
+  }
+
+/* This is for small screens */
+  @media only screen and (max-width: 800px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+    }
+
+    .left {
+      order: 2;
+      text-align: center;
+      border-right: none;
+      border-top: groove;
+      border-color: #999;
+    }
+
+    .left ul li {
+      text-align: center;
+    }
+
+    .right {
+      order: 1;
+      margin-left: 15px;
+    }
+
+    .title {
+      font-size: 32px;
+    }
+  }
